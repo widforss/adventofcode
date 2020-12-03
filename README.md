@@ -7,3 +7,7 @@
 ## 2
 
     cargo run --example 2 examples/2/passwords.txt
+
+## 3
+
+    cargo run --example 3 examples/3/forest.txt

@@ -11,3 +11,7 @@
 ## 3
 
     cargo run --example 3 examples/3/forest.txt
+
+## 4
+
+    ghc examples/4/main.hs && examples/4/main examples/4/passports.txt

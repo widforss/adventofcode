@@ -15,3 +15,7 @@
 ## 4
 
     ghc examples/4/main.hs && examples/4/main examples/4/passports.txt
+
+## 5
+
+    ghc examples/5/main.hs && examples/5/main examples/5/boardingpasses.txt

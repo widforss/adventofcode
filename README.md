@@ -19,3 +19,7 @@
 ## 5
 
     ghc examples/5/main.hs && examples/5/main examples/5/boardingpasses.txt
+
+## 6
+
+    python3 examples/6/main.py examples/6/answers.txt

@@ -27,3 +27,7 @@
 ## 7. Prolog
 
     swipl examples/7/main.pl -- examples/7/bags.txt
+
+## 8. Rust
+
+    cargo run --example 8 examples/8/program.txt

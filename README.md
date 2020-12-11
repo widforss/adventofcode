@@ -31,3 +31,7 @@
 ## 8. Rust
 
     cargo run --example 8 examples/8/program.txt
+
+## 9. Rust
+
+    cargo run --example 9 examples/9/numbers.txt

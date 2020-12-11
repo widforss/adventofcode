@@ -35,3 +35,7 @@
 ## 9. Rust
 
     cargo run --example 9 examples/9/numbers.txt
+
+## 10. Python
+
+    python3 examples/10/main.py examples/10/jolts.txt

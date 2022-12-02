@@ -3,7 +3,7 @@ from functools import reduce
 
 print("Answer part 1: " + str(
     reduce(
-        lambda a, r: a + (r[0] + 1) + {0: 3, 1: 6, 2: 0}[((r[1] + 3) % 3)],
+        lambda a, r: a + (r[0] + 1) + ((r[1] + 4) % 3) * 3,
         [
             (ord(game[2]) - ord('X'), ord(game[2]) - ord(game[0]) - (ord('X') - ord('A')))
             for game in open(sys.argv[1]).read().split("\n")

@@ -7,3 +7,7 @@
 ## 2. Python
 
     python3 examples/2022/2/main.py examples/2022/2/plan.txt
+    
+## 3. Python
+
+    python3 examples/2022/3/main.py examples/2022/3/rucksacks.txt

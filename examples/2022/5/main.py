@@ -1,14 +1,13 @@
 import sys
 
-input = open(sys.argv[1]).read()
-(stacks, steps) = input.split("\n\n")
+stacks, steps = open(sys.argv[1]).read().split("\n\n")
 stacks = stacks.split("\n")[:-1]
 stacks = [
     [level[i] for level in stacks if level[i] != ' ']
     for i in range(1, len(stacks[0]), 4)
 ]
 steps = [
-    [int(step[1]), int(step[3]) - 1, int(step[5]) - 1]
+    (int(step[1]), int(step[3]) - 1, int(step[5]) - 1)
     for step in map(str.split, steps.split("\n"))
 ]
 

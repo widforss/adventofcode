@@ -8,4 +8,4 @@ def find_marker(signal, length):
 
 input = open(sys.argv[1]).read()
 print("Answer part 1: " + str(find_marker(input, 4)))
-print("Answer part 1: " + str(find_marker(input, 14)))
+print("Answer part 2: " + str(find_marker(input, 14)))

@@ -19,3 +19,7 @@
 ## 5. Python
 
     python3 examples/2022/5/main.py examples/2022/5/crates.txt
+    
+## 6. Python
+
+    python3 examples/2022/6/main.py examples/2022/6/signal.txt

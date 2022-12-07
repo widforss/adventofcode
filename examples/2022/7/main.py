@@ -3,18 +3,17 @@ import sys
 
 def cd(args, _out, cwd, dirs):
     if args == ["/"]:
-        return [], dirs
+        return (), dirs
     if args == [".."]:
         return cwd[:-1], dirs
-    return cwd + [args[0]], dirs
+    return cwd + (args[0],), dirs
 
 
 def ls(_args, out, cwd, dirs):
     for type, name in out:
         if type != "dir":
             for i in range(len(cwd) + 1):
-                full_name = f"/{'/'.join(cwd[:i])}"
-                dirs[full_name] = dirs.get(full_name, 0) + int(type)
+                dirs[cwd[:i]] = dirs.get(cwd[:i], 0) + int(type)
     return cwd, dirs
 
 
@@ -32,12 +31,12 @@ input = [
     for cmd in open(sys.argv[1]).read().split("$ ")[1:]
 ]
 
-dirs = exec_cmd(input, [], {})
+dirs = exec_cmd(input, (), {})
 print("Answer part 1: " + str(
     sum([size for size in dirs.values() if size <= 100000])
 ))
 
-to_free = dirs["/"] + 30000000 - 70000000
+to_free = dirs[()] + 30000000 - 70000000
 print("Answer part 2: " + str(
     min([size for size in dirs.values() if size >= to_free])
 ))

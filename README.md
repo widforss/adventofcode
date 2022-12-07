@@ -23,3 +23,7 @@
 ## 6. Python
 
     python3 examples/2022/6/main.py examples/2022/6/signal.txt
+
+## 7. Python
+    
+    python3 examples/2022/7/main.py examples/2022/7/commands.txt

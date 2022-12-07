@@ -28,7 +28,7 @@ def exec_cmd(cmds, cwd, dirs):
 
 
 input = [
-    list(map(str.split, cmd.split("\n")[:-1]))
+    [line.split() for line in cmd.split("\n")[:-1]]
     for cmd in open(sys.argv[1]).read().split("$ ")[1:]
 ]
 

@@ -2,37 +2,31 @@ import sys
 from copy import deepcopy
 
 
-def cd(args, _out, cwd, fs, dirs):
+def cd(args, _out, cwd, dirs):
     if args == ["/"]:
-        return [], fs, dirs
+        return [], dirs
     if args == [".."]:
-        return cwd[:-1], fs, dirs
-    return cwd + [args[0]], fs, dirs
+        return cwd[:-1], dirs
+    return cwd + [args[0]], dirs
 
 
-def ls(_args, out, cwd, fs, dirs):
-    node = fs = deepcopy(fs)
+def ls(_args, out, cwd, dirs):
     dirs = deepcopy(dirs)
-    for dir in cwd:
-        node = node[dir]
     for type, name in out:
-        if type == "dir":
-            node[name] = {}
-        else:
-            node[name] = int(type)
+        if type != "dir":
             for i in range(len(cwd) + 1):
                 full_name = f"/{'/'.join(cwd[:i])}"
-                dirs[full_name] = dirs.get(full_name, 0) + node[name]
-    return cwd, fs, dirs
+                dirs[full_name] = dirs.get(full_name, 0) + int(type)
+    return cwd, dirs
 
 
-def exec_cmd(cmds, cwd, fs, dirs):
+def exec_cmd(cmds, cwd, dirs):
     if not cmds:
         return dirs
     cmd, args, out = cmds[0][0][0], cmds[0][0][1:], cmds[0][1:]
     if cmd in ["cd", "ls"]:
-        cwd, fs, dirs = globals()[cmd](args, out, cwd, fs, dirs)
-    return exec_cmd(cmds[1:], cwd, fs, dirs)
+        cwd, dirs = globals()[cmd](args, out, cwd, dirs)
+    return exec_cmd(cmds[1:], cwd, dirs)
 
 
 input = [
@@ -40,7 +34,7 @@ input = [
     for cmd in open(sys.argv[1]).read().split("$ ")[1:]
 ]
 
-dirs = exec_cmd(input, [], {}, {})
+dirs = exec_cmd(input, [], {})
 print("Answer part 1: " + str(
     sum([size for size in dirs.values() if size <= 100000])
 ))

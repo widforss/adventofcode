@@ -1,5 +1,4 @@
 import sys
-from copy import deepcopy
 
 
 def cd(args, _out, cwd, dirs):
@@ -11,7 +10,6 @@ def cd(args, _out, cwd, dirs):
 
 
 def ls(_args, out, cwd, dirs):
-    dirs = deepcopy(dirs)
     for type, name in out:
         if type != "dir":
             for i in range(len(cwd) + 1):

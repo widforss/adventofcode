@@ -27,3 +27,7 @@
 ## 7. Python
     
     python3 examples/2022/7/main.py examples/2022/7/commands.txt
+
+## 8. Python
+
+    python3 examples/2022/8/main.py examples/2022/8/trees.txt

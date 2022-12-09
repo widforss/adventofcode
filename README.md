@@ -31,3 +31,7 @@
 ## 8. Python
 
     python3 examples/2022/8/main.py examples/2022/8/trees.txt
+
+## 9. Python
+
+    python3 examples/2022/9/main.py examples/2022/9/moves.txt

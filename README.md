@@ -35,3 +35,11 @@
 ## 9. Python
 
     python3 examples/2022/9/main.py examples/2022/9/moves.txt
+
+## 10. Python
+
+    python3 examples/2022/10/main.py examples/2022/10/instructions.txt
+
+## 11. Python
+
+    python3 examples/2022/11/main.py examples/2022/11/monkeys.txt

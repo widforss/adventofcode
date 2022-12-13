@@ -43,3 +43,7 @@
 ## 11. Python
 
     python3 examples/2022/11/main.py examples/2022/11/monkeys.txt
+
+## 13. Python
+
+    python3 examples/2022/13/main.py examples/2022/13/lists.txt
